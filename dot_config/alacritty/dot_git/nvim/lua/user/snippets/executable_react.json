@@ -1,0 +1,52 @@
+{
+  "Observe a changing value in a React useEffect hook": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "cle",
+    "body": ["useEffect(() => {", "\tconsole.log('$0: ', $0)", " }, [$0 ])"],
+    "description": "Log output to console with a label"
+  },
+  "Create a state variable in react": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "uses",
+    "body": [
+      "const [ ${1:variableName}, set${1/(.*)/${1:/capitalize}/} ] = useState($0)"
+    ],
+    "description": "Log output to console with a label"
+  },
+  "Create a memoized variable in react": {
+    "scope": "javascriptreact,typescriptreact",
+    "prefix": "usem",
+    "body": ["const ${1:variableName} = useMemo(() => {", "\t$0", "},[])"],
+    "description": "Create memoized variable"
+  },
+  "Create a functional React component": {
+    "scope": "typescriptreact",
+    "prefix": "fc",
+    "body": [
+      "type ${1}Props = {${2:key}: ${3:valueType}}",
+      "",
+      "function ${1:ComponentName}({${2:key}}: ${1}Props): ReactElement {",
+      "\treturn (",
+      "\t\t<${4:div}>${0}</${4:div}>",
+      "\t)",
+      "}"
+    ],
+    "description": "Create memoized variable"
+  },
+  "Create and export a functional React component": {
+    "scope": "typescriptreact",
+    "prefix": "efc",
+    "body": [
+      "import { ReactElement } from 'react'",
+      "",
+      "type ${1:${TM_FILENAME_BASE}}Props = {${2:key}: ${3:valueType}}",
+      "",
+      "export function ${1:${TM_FILENAME_BASE}}({${2:key}: ${1:${TM_FILENAME_BASE}}Props): ReactElement {",
+      "\treturn (",
+      "\t\t<${4:div}>{${0}}</${4:div}>",
+      "\t)",
+      "}"
+    ],
+    "description": "Create memoized variable"
+  }
+}

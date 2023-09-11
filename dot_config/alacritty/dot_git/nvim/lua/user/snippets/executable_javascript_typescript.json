@@ -1,0 +1,44 @@
+{
+  "Print to console": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+    "prefix": "cl",
+    "body": ["console.log('$0')"],
+    "description": "Log output to console"
+  },
+  "Print to console with a label": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+    "prefix": "clo",
+    "body": ["console.log('$0: ', $0)"],
+    "description": "Log output to console with a label"
+  },
+  "Create a named arrow function": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+    "prefix": "narrow",
+    "body": ["const ${1:variableName} = (${2:arg}: ${3:ArgType}) => {${0}}"],
+    "description": "Create a named arrow function"
+  },
+  "Create an anonymous arrow function": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+    "prefix": "aarrow",
+    "body": ["(${1:arg}: ${2:ArgType}) => {${0}}"],
+    "description": "Create an anonymous arrow function"
+  },
+  "Destructure an object": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+    "prefix": "deo",
+    "body": ["const { ${0:member} } = ${1:obj}"],
+    "description": "Destructure members of an object"
+  },
+  "Destructure an array": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+    "prefix": "dea",
+    "body": ["const [ ${0:member} ] = ${1:arr}"],
+    "description": "Destructure members of an array"
+  },
+  "Add a TODO comment": {
+    "scope": "javascript,typescript,javascriptreact,typescriptreact,svelte",
+    "prefix": "todo",
+    "body": ["// TODO: ${0}"],
+    "description": "Add a TODO comment"
+  }
+}
