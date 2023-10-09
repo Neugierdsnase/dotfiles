@@ -77,9 +77,10 @@ return {
       opts = { suggestion = { auto_trigger = true, debounce = 150 } },
     },
     {
-      "kylechui/nvim-surround",
-      version = "*", -- Use for stability; omit to use `main` branch for the latest features
-      event = "VeryLazy",
+      "ur4ltz/surround.nvim",
+      config = function()
+        require "surround".setup { mappings_style = "surround" }
+      end,
       lazy = false,
     },
     {

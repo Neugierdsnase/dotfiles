@@ -27,6 +27,9 @@ if status is-interactive
     # setting nvim as the default editor
     set -gx EDITOR (type -p nvim)
 
+    # adding bun to the path
+    fish_add_path ~/.bun/bin
+
     # You must call it on initialization or listening to directory switching won't work
     load_nvm > /dev/stderr
 
