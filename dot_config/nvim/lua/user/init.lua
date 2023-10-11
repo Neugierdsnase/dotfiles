@@ -51,24 +51,31 @@ return {
     n = {
       ["mo"] = { "o<Esc>k", desc = "Add empty line below" },
       ["mO"] = { "O<Esc>j", desc = "Add empty line above" },
-      ["<leader>a"] = { "ggVG", desc = "Switch to visual mode and select all." }
+      ["<leader>a"] = { "ggVG", desc = "Switch to visual mode and select all." },
     },
     i = {
       ["kj"] = { "<Esc><cmd>wa<cr>", desc = "Exit insert mode and write all changed files" },
     },
   },
-  options = {
-    opt = {
-      showtabline = 0
-    },
-  },
   plugins = {
+    {
+      "AstroNvim/astrocommunity",
+      { import = "astrocommunity.pack.typescript-all-in-one" },
+      { import = "astrocommunity.pack.json" },
+      { import = "astrocommunity.pack.toml" },
+      { import = "astrocommunity.pack.yaml" },
+      { import = "astrocommunity.pack.rust" },
+      { import = "astrocommunity.pack.html-css" },
+      { import = "astrocommunity.pack.markdown" },
+      { import = "astrocommunity.motion.nvim-surround" },
+      { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
+    },
     {
       "rebelot/heirline.nvim",
       opts = function(_, opts)
         opts.winbar = nil
         return opts
-      end
+      end,
     },
     {
       "zbirenbaum/copilot.lua",
@@ -77,20 +84,13 @@ return {
       opts = { suggestion = { auto_trigger = true, debounce = 150 } },
     },
     {
-      "ur4ltz/surround.nvim",
-      config = function()
-        require "surround".setup { mappings_style = "surround" }
-      end,
-      lazy = false,
-    },
-    {
       "folke/todo-comments.nvim",
       dependencies = { "nvim-lua/plenary.nvim" },
       opts = {
         -- your configuration comes here
         -- or leave it empty to use the default settings
         -- refer to the configuration section @ https://github.com/folke/todo-comments.nvim
-      }
+      },
     },
     { -- override nvim-cmp plugin
       "hrsh7th/nvim-cmp",
@@ -105,10 +105,10 @@ return {
         -- modify the sources part of the options table
         opts.sources = cmp.config.sources {
           { name = "nvim_lsp", priority = 1000 },
-          { name = "luasnip",  priority = 750 },
-          { name = "copilot",  priority = 700 }, -- new source
-          { name = "buffer",   priority = 500 },
-          { name = "path",     priority = 250 },
+          { name = "luasnip", priority = 750 },
+          { name = "copilot", priority = 700 }, -- new source
+          { name = "buffer", priority = 500 },
+          { name = "path", priority = 250 },
         }
 
         local copilot = require "copilot.suggestion"
@@ -143,16 +143,16 @@ return {
       "rebelot/kanagawa.nvim",
       lazy = false,
       config = function()
-        require("kanagawa").setup({
+        require("kanagawa").setup {
           transparent = true,
           terminal_colors = true,
           colors = {
             theme = {
               all = {
                 ui = {
-                  bg_gutter = "none"
-                }
-              }
+                  bg_gutter = "none",
+                },
+              },
             },
             overrides = function(colors)
               local theme = colors.theme
@@ -185,8 +185,10 @@ return {
                 PmenuThumb = { bg = theme.ui.bg_p2 },
               }
             end,
-          }
-        })
+          },
+        }
       end,
-    } }
+    },
+  },
+  colorscheme = "kanagawa",
 }
