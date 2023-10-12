@@ -1,21 +1,16 @@
-set fish_greeting
+set fish_greeting ""
 
 if status is-interactive
 
     # workflow aliases
     alias conf 'cd ~/.config'
-    alias frc 'cd ~/.config/fish; and nvim .; and cd -'
-    alias avim 'cd ~/.config/nvim; and nvim .; and cd -'
     alias pd 'tmuxinator start prompt-dress'
-    alias blog 'tmuxinator start blog'
-    alias alc 'tmuxinator start alc'
 
     # git aliases
     alias fetch 'git fetch'
     alias pull 'git pull'
     alias push 'git push'
     alias dev 'git checkout develop'
-    alias gitinit 'git init; and git config user.name "Konstantin Kovar"; and git config user.email "mail@vomkonstant.in"; and git config --local core.sshCommand "ssh -i ~/.ssh/id_neugierdsnase_rsa"'
 
     # program aliases
     alias vim 'nvim'
@@ -26,6 +21,9 @@ if status is-interactive
 
     # setting nvim as the default editor
     set -gx EDITOR (type -p nvim)
+
+    # setting this ChatGPT API key for the nvim plugin
+    set -gx OPENAI_API_KEY (cat ~/.config/openai_api_key.txt)
 
     # adding bun to the path
     fish_add_path ~/.bun/bin

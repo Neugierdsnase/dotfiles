@@ -51,7 +51,8 @@ return {
 		n = {
 			["mo"] = { "o<Esc>k", desc = "Add empty line below" },
 			["mO"] = { "O<Esc>j", desc = "Add empty line above" },
-			["<leader>a"] = { "ggVG", desc = "Switch to visual mode and select all." },
+			["<leader>a"] = { "ggVG", desc = "Switch to visual mode and select all" },
+			["gpt"] = { "<cmd>ChatGPT<cr>", desc = "Open ChatGPT client window" },
 		},
 		i = {
 			["kj"] = { "<Esc><cmd>wa<cr>", desc = "Exit insert mode and write all changed files" },
@@ -65,81 +66,41 @@ return {
 			{ import = "astrocommunity.pack.toml" },
 			{ import = "astrocommunity.pack.yaml" },
 			{ import = "astrocommunity.pack.rust" },
+			{ import = "astrocommunity.pack.svelte" },
 			{ import = "astrocommunity.pack.html-css" },
 			{ import = "astrocommunity.pack.markdown" },
 			{ import = "astrocommunity.pack.tailwindcss" },
 			{ import = "astrocommunity.pack.bash" },
+			{ import = "astrocommunity.pack.lua" },
 			{ import = "astrocommunity.motion.nvim-surround" },
 			{ import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
 			{ import = "astrocommunity.editing-support.todo-comments-nvim" },
+			{ import = "astrocommunity.editing-support.chatgpt-nvim" },
 			{ import = "astrocommunity.bars-and-lines.heirline-vscode-winbar" },
-			{ import = "astrocommunity.bars-and-lines.vim-illuminate" },
 			{ import = "astrocommunity.scrolling.mini-animate" },
+			{ import = "astrocommunity.completion.copilot-lua-cmp" },
+			{ import = "astrocommunity.workflow.hardtime-nvim" },
 		},
 		{
 			"zbirenbaum/copilot.lua",
-			cmd = "Copilot",
-			event = "User AstroFile",
-			opts = { suggestion = { auto_trigger = true, debounce = 150 } },
-		},
-		{ -- override nvim-cmp plugin
-			"hrsh7th/nvim-cmp",
-			dependencies = {
-				"zbirenbaum/copilot.lua", -- add cmp source as dependency of cmp
+			opts = {
+				suggestion = {
+					auto_trigger = true,
+					debounce = 150,
+					keymap = {
+						accept = "<C-h>",
+						accept_word = "<C-l>",
+						accept_line = "<C-j>",
+						next = "<C-o>",
+						prev = "<C-i>",
+						dismiss = "<C-c>",
+					},
+				},
 			},
-			-- override the options table that is used in the `require("cmp").setup()` call
-			opts = function(_, opts)
-				-- opts parameter is the default options table
-				-- the function is lazy loaded so cmp is able to be required
-				local cmp = require("cmp")
-				-- modify the sources part of the options table
-				opts.sources = cmp.config.sources({
-					{ name = "nvim_lsp", priority = 1000 },
-					{ name = "luasnip", priority = 750 },
-					{ name = "copilot", priority = 700 }, -- new source
-					{ name = "buffer", priority = 500 },
-					{ name = "path", priority = 250 },
-				})
-
-				local copilot = require("copilot.suggestion")
-				opts.mapping["<C-i>"] = cmp.mapping(function()
-					if copilot.is_visible() then
-						copilot.next()
-					end
-				end)
-
-				opts.mapping["<C-o>"] = cmp.mapping(function()
-					if copilot.is_visible() then
-						copilot.prev()
-					end
-				end)
-
-				opts.mapping["<C-l>"] = cmp.mapping(function()
-					if copilot.is_visible() then
-						copilot.accept_word()
-					end
-				end)
-
-				opts.mapping["<C-j>"] = cmp.mapping(function()
-					if copilot.is_visible() then
-						copilot.accept_line()
-					end
-				end)
-
-				opts.mapping["<C-h>"] = cmp.mapping(function()
-					if copilot.is_visible() then
-						copilot.accept()
-					end
-				end)
-
-				opts.mapping["<C-c>"] = cmp.mapping(function()
-					if copilot.is_visible() then
-						copilot.dismiss()
-					end
-				end)
-				-- return the new table to be used
-				return opts
-			end,
+		},
+		{
+			"m4xshen/hardtime.nvim",
+			opts = { max_count = 9, allow_different_key = true },
 		},
 		{
 			"rebelot/kanagawa.nvim",
