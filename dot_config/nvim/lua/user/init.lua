@@ -76,10 +76,23 @@ return {
 			{ import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
 			{ import = "astrocommunity.editing-support.todo-comments-nvim" },
 			{ import = "astrocommunity.editing-support.chatgpt-nvim" },
+			{ import = "astrocommunity.editing-support.refactoring-nvim" },
 			{ import = "astrocommunity.bars-and-lines.heirline-vscode-winbar" },
 			{ import = "astrocommunity.scrolling.mini-animate" },
 			{ import = "astrocommunity.completion.copilot-lua-cmp" },
 			{ import = "astrocommunity.workflow.hardtime-nvim" },
+		},
+		{
+			"folke/todo-comments.nvim",
+			opts = {
+				TODO = { icon = "✓ ", color = "info" },
+				TODON = { icon = " ", color = "warning", alt = { "TODONEXT", "NEXT" } },
+				HACK = { icon = " ", color = "warning" },
+				WARN = { icon = " ", color = "warning", alt = { "WARNING", "XXX" } },
+				PERF = { icon = "★ ", alt = { "OPTIM", "PERFORMANCE", "OPTIMIZE" } },
+				NOTE = { icon = "󰈙 ", color = "hint", alt = { "INFO" } },
+				TEST = { icon = "✗ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
+			},
 		},
 		{
 			"zbirenbaum/copilot.lua",
