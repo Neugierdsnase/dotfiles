@@ -28,6 +28,9 @@ if status is-interactive
     # adding bun to the path
     fish_add_path ~/.bun/bin
 
+    # adding surrealdb to the path
+    fish_add_path /home/konsti/.surrealdb
+
     # You must call it on initialization or listening to directory switching won't work
     load_nvm > /dev/stderr
 
