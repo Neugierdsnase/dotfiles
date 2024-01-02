@@ -72,15 +72,14 @@ return {
 			{ import = "astrocommunity.pack.tailwindcss" },
 			{ import = "astrocommunity.pack.bash" },
 			{ import = "astrocommunity.pack.lua" },
+			{ import = "astrocommunity.pack.python" },
 			{ import = "astrocommunity.motion.nvim-surround" },
 			{ import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
 			{ import = "astrocommunity.editing-support.todo-comments-nvim" },
 			{ import = "astrocommunity.editing-support.chatgpt-nvim" },
 			{ import = "astrocommunity.editing-support.refactoring-nvim" },
 			{ import = "astrocommunity.bars-and-lines.heirline-vscode-winbar" },
-			{ import = "astrocommunity.scrolling.mini-animate" },
 			{ import = "astrocommunity.completion.copilot-lua-cmp" },
-			{ import = "astrocommunity.workflow.hardtime-nvim" },
 		},
 		{
 			"folke/todo-comments.nvim",
@@ -152,7 +151,7 @@ return {
 								TelescopeResultsNormal = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m1 },
 								TelescopeResultsBorder = { fg = theme.ui.bg_m1, bg = theme.ui.bg_m1 },
 								TelescopePreviewNormal = { bg = theme.ui.bg_dim },
-								TelescopePreviewBorder = { bg = theme.ui.bg_dim, fg = theme.ui.bg_dim },
+								TelescopePreviewBorder = { bg = theme.ui.bg_dim, fg = theme.ui.bg_p1 },
 
 								-- more uniform colors for the popup menu
 								Pmenu = { fg = theme.ui.shade0, bg = theme.ui.bg_p1 }, -- add `blend = vim.o.pumblend` to enable transparency
