@@ -47,6 +47,7 @@ return {
 		Spellcheck = "󰓆",
 		TabClose = "󰅙",
 	},
+
 	mappings = {
 		n = {
 			["mo"] = { "o<Esc>k", desc = "Add empty line below" },
@@ -58,6 +59,7 @@ return {
 			["kj"] = { "<Esc><cmd>wa<cr>", desc = "Exit insert mode and write all changed files" },
 		},
 	},
+
 	plugins = {
 		{
 			"AstroNvim/astrocommunity",
@@ -81,6 +83,7 @@ return {
 			{ import = "astrocommunity.bars-and-lines.heirline-vscode-winbar" },
 			{ import = "astrocommunity.completion.copilot-lua-cmp" },
 		},
+
 		{
 			"folke/todo-comments.nvim",
 			opts = {
@@ -93,6 +96,7 @@ return {
 				TEST = { icon = "✗ ", color = "test", alt = { "TESTING", "PASSED", "FAILED" } },
 			},
 		},
+
 		{
 			"zbirenbaum/copilot.lua",
 			opts = {
@@ -110,10 +114,12 @@ return {
 				},
 			},
 		},
+
 		{
 			"m4xshen/hardtime.nvim",
 			opts = { max_count = 9, allow_different_key = true },
 		},
+
 		{
 			"rebelot/kanagawa.nvim",
 			lazy = false,
@@ -165,5 +171,6 @@ return {
 			end,
 		},
 	},
+
 	colorscheme = "kanagawa",
 }
