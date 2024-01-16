@@ -1,4 +1,8 @@
 return {
+	options = {
+		opt = { scrolloff = 8 },
+	},
+
 	icons = {
 		ActiveLSP = "",
 		ActiveTS = "",
@@ -75,6 +79,8 @@ return {
 			{ import = "astrocommunity.pack.bash" },
 			{ import = "astrocommunity.pack.lua" },
 			{ import = "astrocommunity.pack.python" },
+			{ import = "astrocommunity.pack.java" },
+			{ import = "astrocommunity.pack.kotlin" },
 			{ import = "astrocommunity.motion.nvim-surround" },
 			{ import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
 			{ import = "astrocommunity.editing-support.todo-comments-nvim" },
@@ -82,6 +88,13 @@ return {
 			{ import = "astrocommunity.editing-support.refactoring-nvim" },
 			{ import = "astrocommunity.bars-and-lines.heirline-vscode-winbar" },
 			{ import = "astrocommunity.completion.copilot-lua-cmp" },
+		},
+
+		{
+			"akinsho/toggleterm.nvim",
+			opts = {
+				shell = "fish",
+			},
 		},
 
 		{
@@ -113,11 +126,6 @@ return {
 					},
 				},
 			},
-		},
-
-		{
-			"m4xshen/hardtime.nvim",
-			opts = { max_count = 9, allow_different_key = true },
 		},
 
 		{
