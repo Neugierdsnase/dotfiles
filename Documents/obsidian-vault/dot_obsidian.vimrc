@@ -6,3 +6,6 @@ nnoremap mo o<Esc>k
 
 " Map 'mO' to insert a blank line above the cursor
 nnoremap mO O<Esc>j
+
+" Map '<leader>a' to select all
+nnoremap <leader>a ggVG
