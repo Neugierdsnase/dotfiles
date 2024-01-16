@@ -1,0 +1,185 @@
+{
+  "main": {
+    "id": "d7d46f57ee561632",
+    "type": "split",
+    "children": [
+      {
+        "id": "c47ed49de64ce75e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "060e06b8b5bb1abf",
+            "type": "leaf",
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "Kanban.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "612753793f525db8",
+    "type": "split",
+    "children": [
+      {
+        "id": "e47baa6f77fcb647",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "28d1e7b010b9da21",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9bd7976c1d28346f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9534b48f1f47be51",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "b0f39da5b46ad141",
+    "type": "split",
+    "children": [
+      {
+        "id": "785a9391d24a9423",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4fbd6b78858d14f1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Kanban.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d3b6c9d572bc06bb",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Kanban.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "fe52793c59018c5d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "51f99641286ccd4f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Kanban.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "060e06b8b5bb1abf",
+  "lastOpenFiles": [
+    "why i am leaving medium.md",
+    "The books I read in January.md",
+    "AI Checkpoint.md",
+    "frontend_discoveries.md",
+    "Artificial Intelligence/AI Checkpoint.md",
+    "Untitled.md",
+    "Artificial Intelligence",
+    "Kanban.md",
+    "Projects/Blog/The books I read in January.md",
+    "Projects/Blog",
+    "Projects/The Prompt Tailor.md",
+    "Kanban.canvas",
+    "Projects/why i am leaving medium.md",
+    "Manifest.md",
+    "my calendar.md",
+    "my shutdown ritual.md",
+    "TODO columns/backburner.md",
+    "TODO columns/waiting.md",
+    "TODO columns/to discuss.md",
+    "TODO columns/scheduled.md",
+    "TODO columns/ready.md",
+    "TODO columns/clarify.md",
+    "2024-01-08.md",
+    "Untitled 2.canvas",
+    "Untitled 1.canvas",
+    "TODO.md",
+    "Projects/AI Findom.md",
+    "Video Scripts/shorts/GPT-Review SEO Mentor.md",
+    "Video Scripts/shorts/GPT-Review SEO Fox.md",
+    "Video Scripts/shorts/GPT-Review Glibatree Art Designer.md",
+    "Video Scripts/shorts/GPT-Review - Escape the Haunt.md",
+    "Projects",
+    "TODO columns",
+    "Video Scripts/shorts",
+    "Video Scripts"
+  ]
+}
