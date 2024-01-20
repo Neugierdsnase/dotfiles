@@ -29,10 +29,14 @@ if status is-interactive
     fish_add_path ~/.bun/bin
 
     # adding surrealdb to the path
-    fish_add_path ~/.surrealdb
+    fish_add_path /home/konsti/.surrealdb
+
+    # adding sdkman to the path
+    fish_add_path /home/konsti/.sdkman/bin
 
     # adding java to the path
-    fish_add_path ~/.sdkman/candidates/java/current/bin/java
+    set -gx JAVA_HOME /home/konsti/.sdkman/candidates/java/current
+    fish_add_path $JAVA_HOME/bin
 
     # You must call it on initialization or listening to directory switching won't work
     load_nvm > /dev/stderr

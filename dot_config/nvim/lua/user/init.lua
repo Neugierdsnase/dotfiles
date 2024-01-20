@@ -86,8 +86,11 @@ return {
 			{ import = "astrocommunity.editing-support.todo-comments-nvim" },
 			{ import = "astrocommunity.editing-support.chatgpt-nvim" },
 			{ import = "astrocommunity.editing-support.refactoring-nvim" },
+			{ import = "astrocommunity.editing-support.zen-mode-nvim" },
 			{ import = "astrocommunity.bars-and-lines.heirline-vscode-winbar" },
 			{ import = "astrocommunity.completion.copilot-lua-cmp" },
+			{ import = "astrocommunity.note-taking.obsidian-nvim" },
+			{ import = "astrocommunity.color.twilight-nvim" },
 		},
 
 		{

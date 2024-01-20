@@ -189,7 +189,7 @@ ex ()
   fi
 }
 
-neofetch
+# neofetch
 . "$HOME/.cargo/env"
 
 export NVM_DIR="$HOME/.nvm"
@@ -199,3 +199,7 @@ export NVM_DIR="$HOME/.nvm"
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
+
+# java
+export JAVA_HOME=/home/konsti/.sdkman/candidates/java/current
+export PATH=$JAVA_HOME/bin:$PATH
