@@ -1,0 +1,46 @@
+" Plugins
+Plug 'tpope/vim-surround'            " ys, cs, ds, S
+
+" Leader key mapping
+let mapleader = "\<Space>"
+
+" Common settings
+set showmode
+set so=5
+set incsearch
+set nu
+set relativenumber
+
+" Idea-specific settings
+set ideajoin
+set ideastatusicon=gray
+
+" Map 'kj' to escape motion
+imap kj <Esc>
+
+" Map 'mo' to insert a blank line below the cursor
+map mo o<Esc>k
+
+" Map 'mO' to insert a blank line above the cursor
+map mO O<Esc>j
+
+" Searching
+map <leader>ff <Action>(SearchEverywhere)
+map <leader>fw <Action>(FindInPath)
+
+map <leader>fe <Action>(SelectFileInProjectView)
+
+" Formatting
+map <leader>lf <Action>(ReformatCode)
+
+" Map '<leader>a' to select all
+map <leader>a ggVG
+
+" other
+map <leader>w <Action>(SaveAll)
+map <leader>c <Action>(CloseEditorsGroup)
+map <leader>lr <Action>(Refactorings.QuickListPopupAction)
+
+map [d <Action>(GotoNextError)
+map ]d <Action>(GotoPreviousError)
+

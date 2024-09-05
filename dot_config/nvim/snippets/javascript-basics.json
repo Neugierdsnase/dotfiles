@@ -1,0 +1,24 @@
+{
+  "console logging": {
+    "prefix": [
+      "cl"
+    ],
+    "body": [
+      "console.log('${1}: ', ${1});"
+    ],
+    "description": "Log a value with a label."
+  },
+  "console logging in useEffect": {
+    "prefix": [
+      "cle"
+    ],
+    "body": [
+      "React.useEffect(() => console.log('${1}: ', ${1}), [${1}]);"
+    ],
+    "description": "Log a value with a label.",
+    "scope": [
+      "javascriptreact",
+      "typescriptreact"
+    ]
+  }
+}

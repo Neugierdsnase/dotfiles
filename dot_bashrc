@@ -123,19 +123,6 @@ alias nlightdm='sudo $EDITOR /etc/lightdm/lightdm.conf'
 alias nmirrorlist='sudo nano /etc/pacman.d/mirrorlist'
 alias nsddmk='sudo $EDITOR /etc/sddm.conf.d/kde_settings.conf'
 
-#cd/ aliases
-alias home='cd ~'
-alias etc='cd /etc/'
-alias music='cd ~/Music'
-alias vids='cd ~/Videos'
-alias conf='cd ~/.config'
-alias desk='cd ~/Desktop'
-alias pics='cd ~/Pictures'
-alias dldz='cd ~/Downloads'
-alias docs='cd ~/Documents'
-alias sapps='cd /usr/share/applications'
-alias lapps='cd ~/.local/share/applications'
-
 #verify signature for isos
 alias gpg-check='gpg2 --keyserver-options auto-key-retrieve --verify'
 
@@ -203,3 +190,11 @@ export PATH=$BUN_INSTALL/bin:$PATH
 # java
 export JAVA_HOME=/home/konsti/.sdkman/candidates/java/current
 export PATH=$JAVA_HOME/bin:$PATH
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
