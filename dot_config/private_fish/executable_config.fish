@@ -32,9 +32,6 @@ if status is-interactive
     # setting nvim as the default editor
     set -gx EDITOR (type -p nvim)
 
-    # setting this ChatGPT API key for the nvim plugin
-    set -gx OPENAI_API_KEY (cat ~/.config/openai_api_key.txt)
-
     # adding bun to the path
     fish_add_path ~/.bun/bin
 
