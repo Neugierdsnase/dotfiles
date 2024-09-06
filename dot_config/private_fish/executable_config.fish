@@ -19,9 +19,7 @@ if status is-interactive
 
     # program aliases
     alias vim 'nvim'
-    alias python 'python3'
     alias py 'python3'
-    alias pip 'pip3'
     alias lg 'lazygit'
     alias lzd 'lazydocker'
     alias obs 'cd ~/Documents/obsidian-vault/ && nvim .'
