@@ -2,18 +2,23 @@
 # https://meyerweb.com/eric/tools/color-blend/#2D5873:DCD7BA:4:hex
 
 format = """
-[ ](#2D5873)\
+[](#2D5873)\
 $os\
-[󰭓  ](bg:#2D5873 fg:#DCD7BA)\
-[](fg:#2D5873 bg:#507181)\
+[󰭓 ](fg:#DCD7BA bg:#2D5873)\
+[](fg:#507181 bg:#2D5873)\
+[](fg:#2D5873 bg:#507181)\
 $directory\
-[](fg:#507181 bg:#738B8F)\
+[](fg:#738B8F bg:#507181)\
+[](fg:#507181 bg:#738B8F)\
 $git_branch\
-[](fg:#738B8F bg:#96A49E)\
+[](fg:#96A49E bg:#738B8F)\
+[](fg:#738B8F bg:#96A49E)\
 $git_status\
-[](fg:#96A49E bg:#B9BEAC)\
+[](fg:#B9BEAC bg:#96A49E)\
+[](fg:#96A49E bg:#B9BEAC)\
 $docker_context\
-[](fg:#B9BEAC bg:#DCD7BA)\
+[](fg:#DCD7BA bg:#B9BEAC)\
+[](fg:#B9BEAC bg:#DCD7BA)\
 $time\
 $c\
 $elixir\
@@ -43,7 +48,7 @@ disabled = true
 
 [directory]
 style = "bg:#507181"
-format = "[ $path ]($style)"
+format = "[ $path]($style)"
 truncation_length = 3
 truncation_symbol = " / "
 

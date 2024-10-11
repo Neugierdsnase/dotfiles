@@ -41,6 +41,16 @@ map <leader>w <Action>(SaveAll)
 map <leader>c <Action>(CloseEditorsGroup)
 map <leader>lr <Action>(Refactorings.QuickListPopupAction)
 
+" Tabs actions
+map <leader>b <Action>(RecentFiles)
+map [b <Action>(PreviousTab)
+map ]b <Action>(NextTab)
+
+" TODO should be control L map < <Action>(SplitChooser.SplitRight)
+
+" VC
+map <leader>gg <Action>(Git.MainMenu)
+
 map [d <Action>(GotoNextError)
 map ]d <Action>(GotoPreviousError)
 
