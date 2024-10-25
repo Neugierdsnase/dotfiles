@@ -1,0 +1,23 @@
+theme = "kanagawa"
+
+[editor]
+line-number = "relative"
+mouse = false
+bufferline = "multiple"
+
+[editor.cursor-shape]
+insert = "bar"
+
+# At most one section each of 'keys.normal', 'keys.insert' and 'keys.select'
+[keys.normal]
+esc = ["collapse_selection", "keep_primary_selection"]
+g = { a = "code_action" } # Maps `ga` to show possible code actions
+"[" = { b = ":buffer-previous"}
+"]" = { b = ":buffer-next"}
+# Arguably, this should be defined under something like [keys.space] or [keys.window],
+# but as of time of writing, this config option is not exposed
+space = { w = ":w", q = ":wq", c = ":buffer-close", l = {f = ":format"}}
+C = {h = ["jump_view_left"], l = ["jump_view_right"]}
+
+[keys.insert]
+k = { j = ["normal_mode", ":write-all"] } # Maps `jk` to exit insert mode and write all

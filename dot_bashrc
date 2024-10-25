@@ -191,11 +191,13 @@ export PATH=$BUN_INSTALL/bin:$PATH
 export JAVA_HOME=/home/konsti/.sdkman/candidates/java/current
 export PATH=$JAVA_HOME/bin:$PATH
 
+# typescript-langueage-server
+export TYPESCRIPT_LANGUEAGE_SERVER_DIR="$HOME/.config/typescript-langueage-server"
+export PATH=$TYPESCRIPT_LANGUEAGE_SERVER_DIR/bin:$PATH
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH=$BUN_INSTALL/bin:$PATH
+# deno
 . "/home/konsti/.deno/env"

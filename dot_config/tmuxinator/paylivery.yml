@@ -1,7 +1,7 @@
 # /home/konsti/.config/tmuxinator/paylivery.yml
 
 name: paylivery
-root: ~/Projects/messaging-integration/src/frontend/
+root: ~/Projects/messaging-integration/src/frontend/applications/paylivery/
 
 # Optional tmux socket
 # socket_name: foo
