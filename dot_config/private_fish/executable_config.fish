@@ -7,6 +7,7 @@ if status is-interactive
     alias pd 'tmuxinator start prompt-dress'
     alias dsa 'tmuxinator start dsa-gateway'
     alias bbx 'tmuxinator start bbx'
+    alias paylivery 'tmuxinator start paylivery'
 
     alias hb '~/Projects/hemingway-bridge/target/release/hemingway-bridge'
     alias whb '~/Projects/hemingway-bridge/target/release/hemingway-bridge --write'
