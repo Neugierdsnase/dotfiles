@@ -20,15 +20,10 @@ if status is-interactive
 
     # program aliases
     alias vim 'nvim'
-    alias python 'python3'
     alias py 'python3'
-    alias pip 'pip3'
     alias lg 'lazygit'
     alias lzd 'lazydocker'
     alias obs 'cd ~/Documents/obsidian-vault/ && nvim .'
-
-
-
 
     # setting nvim as the default editor
     set -gx EDITOR (type -p nvim)
@@ -44,6 +39,9 @@ if status is-interactive
 
     # adding kafka to the path
     fish_add_path /home/konsti/Software/kafka_2.13-3.8.0/bin
+
+    # adding deno to the path
+    fish_add_path /home/konsti/.deno/bin/deno
 
     # adding java to the path
     # note: sdkman gets initialized via https://github.com/reitzig/sdkman-for-fish

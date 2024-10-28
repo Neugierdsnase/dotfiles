@@ -28,8 +28,11 @@ $gradle\
 $haskell\
 $java\
 $julia\
-$nodejs\
+$kotlin\
+$lua\
 $nim\
+$nodejs\
+$python\
 $rust\
 $scala\
 [ ](fg:#DCD7BA)\
@@ -53,10 +56,14 @@ truncation_length = 3
 truncation_symbol = " / "
 
 [directory.substitutions]
-"Documents" = " 󰈙 "
 "Downloads" = "   "
 "Music" = "   "
 "Pictures" = "   "
+
+[bun]
+symbol = " "
+style = "bg:#DCD7BA fg:#2D5873"
+format = '[ $symbol ($version) ]($style)'
 
 [c]
 symbol = " "
@@ -99,6 +106,7 @@ style = "bg:#DCD7BA fg:#2D5873"
 format = '[ $symbol ($version) ]($style)'
 
 [gradle]
+symbol = " "
 style = "bg:#DCD7BA fg:#2D5873"
 format = '[ $symbol ($version) ]($style)'
 
@@ -117,15 +125,31 @@ symbol = " "
 style = "bg:#DCD7BA fg:#2D5873"
 format = '[ $symbol ($version) ]($style)'
 
-[nodejs]
-symbol = ""
+[kotlin]
+symbol = " "
+style = "bg:#DCD7BA fg:#2D5873"
+format = '[ $symbol ($version) ]($style)'
+
+[lua]
+symbol = " "
 style = "bg:#DCD7BA fg:#2D5873"
 format = '[ $symbol ($version) ]($style)'
 
 [nim]
-symbol = " "
+symbol = " "
 style = "bg:#DCD7BA fg:#2D5873"
 format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = " "
+style = "bg:#DCD7BA fg:#2D5873"
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+symbol = ""
+style = "bg:#DCD7BA fg:#2D5873"
+format = '[ $symbol ($version) ( $virtualenv) ]($style)'
+
 
 [rust]
 symbol = ""

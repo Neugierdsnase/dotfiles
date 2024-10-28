@@ -28,6 +28,5 @@ return {
   { import = "astrocommunity.color.twilight-nvim" },
   { import = "astrocommunity.color.headlines-nvim" },
   { import = "astrocommunity.utility.noice-nvim" },
-  { import = "astrocommunity.programming-language-support.rest-nvim" },
-  { import = "astrocommunity.project.nvim-spectre" },
+  { import = "astrocommunity.search.nvim-spectre" },
 }
