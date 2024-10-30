@@ -16,17 +16,16 @@ if status is-interactive
     alias fetch 'git fetch'
     alias pull 'git pull'
     alias push 'git push'
-    alias dev 'git checkout develop'
 
     # program aliases
-    alias vim 'nvim'
-    alias py 'python3'
-    alias lg 'lazygit'
-    alias lzd 'lazydocker'
+    alias vim nvim
+    alias py python3
+    alias lg lazygit
+    alias lzd lazydocker
     alias obs 'cd ~/Documents/obsidian-vault/ && nvim .'
 
-    # setting nvim as the default editor
-    set -gx EDITOR (type -p nvim)
+    # setting hx as the default editor
+    set -gx EDITOR (type -p hx)
 
     # adding bun to the path
     fish_add_path ~/.bun/bin
@@ -49,8 +48,7 @@ if status is-interactive
     fish_add_path $JAVA_HOME/bin
 
     # You must call it on initialization or listening to directory switching won't work
-    load_nvm > /dev/stderr
+    load_nvm >/dev/stderr
 
     starship init fish | source
 end
-
