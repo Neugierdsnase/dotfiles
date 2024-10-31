@@ -5,16 +5,13 @@ local wezterm = require "wezterm"
 local config = wezterm.config_builder()
 
 -- Spawn a fish shell in login mode
-config.default_prog = { '/usr/bin/fish' }
-
--- Spawn in Project folder TODO: Why doesn't this work?
-config.default_cwd = wezterm.home_dir .. '/Projects' 
+config.default_prog = { '/usr/bin/tmux' }
 
 config.color_scheme = "Kanagawa (Gogh)"
 config.window_decorations = "RESIZE"
 
 -- tmux
-config.leader = { key = "9", mods="CTRL", timeout_milliseconds = 2500 }
+config.leader = { key = "0", mods="CTRL", timeout_milliseconds = 2500 }
 config.keys = {
     {
         mods = "LEADER",
@@ -88,37 +85,10 @@ config.keys = {
     },
 }
 
-for i = 0, 9 do
-    -- leader + number to activate that tab
-    table.insert(config.keys, {
-        key = tostring(i),
-        mods = "LEADER",
-        action = wezterm.action.ActivateTab(i),
-    })
-end
-
 -- tab bar
-config.hide_tab_bar_if_only_one_tab = false
+config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = true
-
--- tmux status
-wezterm.on("update-right-status", function(window, _)
-    local SOLID_LEFT_ARROW = ""
-    local ARROW_FOREGROUND = { Foreground = { Color = "#c6a0f6" } }
-    local prefix = ""
-
-    if window:leader_is_active() then
-        prefix = " " .. utf8.char(0x1f30a) -- ocean wave
-    end
-
-    window:set_left_status(wezterm.format {
-        { Background = { Color = "#b7bdf8" } },
-        { Text = prefix },
-        ARROW_FOREGROUND,
-        { Text = SOLID_LEFT_ARROW }
-    })
-end)
 
 -- and finally, return the configuration to wezterm
 return config

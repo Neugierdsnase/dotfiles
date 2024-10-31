@@ -28,5 +28,4 @@ return {
   { import = "astrocommunity.color.twilight-nvim" },
   { import = "astrocommunity.color.headlines-nvim" },
   { import = "astrocommunity.utility.noice-nvim" },
-  { import = "astrocommunity.search.nvim-spectre" },
 }
