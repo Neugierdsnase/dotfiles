@@ -24,8 +24,8 @@ if status is-interactive
     alias lzd lazydocker
     alias obs 'cd ~/Documents/obsidian-vault/ && nvim .'
 
-    # setting hx as the default editor
-    set -gx EDITOR (type -p hx)
+    # setting neovim as the default editor
+    set -gx EDITOR (type -p nvim)
 
     # adding bun to the path
     fish_add_path ~/.bun/bin
