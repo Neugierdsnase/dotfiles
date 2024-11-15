@@ -42,6 +42,9 @@ if status is-interactive
     # adding deno to the path
     fish_add_path /home/konsti/.deno/bin/deno
 
+    # adding kitty to the path
+    fish_add_path /home/konsti/.local/kitty.app/bin
+
     # adding java to the path
     # note: sdkman gets initialized via https://github.com/reitzig/sdkman-for-fish
     set -gx JAVA_HOME /home/konsti/.sdkman/candidates/java/current
