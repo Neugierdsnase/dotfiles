@@ -24,8 +24,8 @@ if status is-interactive
     alias lzd lazydocker
     alias obs 'cd ~/Documents/obsidian-vault/ && nvim .'
 
-    # setting hx as the default editor
-    set -gx EDITOR (type -p hx)
+    # setting neovim as the default editor
+    set -gx EDITOR (type -p nvim)
 
     # adding bun to the path
     fish_add_path ~/.bun/bin
@@ -41,6 +41,9 @@ if status is-interactive
 
     # adding deno to the path
     fish_add_path /home/konsti/.deno/bin/deno
+
+    # adding kitty to the path
+    fish_add_path /home/konsti/.local/kitty.app/bin
 
     # adding java to the path
     # note: sdkman gets initialized via https://github.com/reitzig/sdkman-for-fish
