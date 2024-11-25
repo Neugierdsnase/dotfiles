@@ -1,3 +1,18 @@
+-- Define the Lua function
+local function substitute_with_confirmation()
+	-- Get the pattern to be replaced from the user
+	local pattern = vim.fn.input("Pattern to replace: ")
+	if pattern == "" then
+		return
+	end
+
+	-- Get the replacement text from the user
+	local replacement = vim.fn.input("Replace with: ")
+
+	-- Perform the substitution with confirmation
+	vim.cmd(":%s/" .. pattern .. "/" .. replacement .. "/gc")
+end
+
 return {
 	options = {
 		opt = { scrolloff = 8 },
@@ -54,10 +69,10 @@ return {
 
 	mappings = {
 		n = {
-			["}<Space>"] = { "o<Esc>k", desc = "Add empty line below" },
-			["{<Space>"] = { "O<Esc>j", desc = "Add empty line above" },
-			["<leader>a"] = { "ggVG", desc = "Switch to visual mode and select all" },
-			["gpt"] = { "<cmd>ChatGPT<cr>", desc = "Open ChatGPT client window" },
+			["<Leader>]"] = { "o<Esc>k", desc = "Add empty line below" },
+			["<Leader>["] = { "O<Esc>j", desc = "Add empty line above" },
+			["<Leader>a"] = { "ggVG", desc = "Switch to visual mode and select all" },
+			["<Leader>rA"] = { substitute_with_confirmation },
 		},
 		i = {
 			["kj"] = { "<Esc><cmd>wa<cr>", desc = "Exit insert mode and write all changed files" },

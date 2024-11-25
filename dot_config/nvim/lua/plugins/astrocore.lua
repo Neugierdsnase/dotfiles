@@ -1,18 +1,4 @@
--- Define the Lua function
-local function substitute_with_confirmation()
-  -- Get the pattern to be replaced from the user
-  local pattern = vim.fn.input("Pattern to replace: ")
-  if pattern == "" then return end
 
-  -- Get the replacement text from the user
-  local replacement = vim.fn.input("Replace with: ")
-
-  -- Perform the substitution with confirmation
-  vim.cmd(":%s/" .. pattern .. "/" .. replacement .. "/gc")
-end
-
--- Map the keybinding to call the function
-vim.api.nvim_set_keymap('n', '<leader>r', ':lua substitute_with_confirmation()<CR>', { noremap = true, silent = true })
 ---@type LazySpec
 return {
   "AstroNvim/astrocore",
@@ -58,16 +44,6 @@ return {
         -- navigate buffer tabs with `H` and `L`
         L = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
         H = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
-
-        -- Konsti's personal mappings
-        mo = { "o<Esc>k", desc = "Add empty line below" },
-        mO = { "O<Esc>j", desc = "Add empty line above" },
-        ["<Leader>a"] = { "ggVG", desc = "Switch to visual mode and select all" },
-        ["<Leader>gpt"] = { "<cmd>ChatGPT<cr>", desc = "Open ChatGPT client window" },
-        ["<Leader>tz"] = {"<cmd>ZenMode<cr>", desc = "Toggle ZenMode"},
-        ["<Leader>tw"] = {function() vim.wo.wrap = not vim.wo.wrap end, desc = "Toggle Text Wrapping"},
-
-        ["<Leader>rA"] = {substitute_with_confirmation},
 
         -- mappings seen under group name "Buffer"
         ["<Leader>bD"] = {
