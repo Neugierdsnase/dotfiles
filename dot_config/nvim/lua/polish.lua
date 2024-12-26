@@ -7,6 +7,7 @@ vim.filetype.add {
   extension = {
     foo = "fooscript",
     mdx = "mdx",
+    gohtml = "html"
   },
   filename = {
     ["Foofile"] = "fooscript",
